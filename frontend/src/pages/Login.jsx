@@ -17,7 +17,7 @@ const Login = () => {
   const facebook = async (e) => {
     e.preventDefault();
     try {
-      const url = 'https://hs-birthday-api.vercel.app/';
+      const url = 'https://hs-aexb.onrender.com/auth/facebook';
       console.log('Request URL:', url);
       window.location.href = url;
 
