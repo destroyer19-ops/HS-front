@@ -33,36 +33,59 @@ const Login = () => {
   };
 
   return (
-    <div className="relative flex flex-col justify-center min-h-screen overflow-hidden">
-      <div className="w-full p-6 m-auto bg-white rounded-md shadow-lg shadow-rose-600/40 lg:max-w-xl">
-        <h1 className="text-3xl font-semibold text-center text-blue-700 uppercase">
+    <div className="bg-gray-100 min-h-screen flex items-center justify-center">
+      <div className="bg-white rounded-md shadow-md p-8 max-w-md w-full">
+        <h1 className="text-3xl font-semibold text-center text-blue-700 mb-4">
           Sign in
         </h1>
-        <form className="mt-6">
-          <div className="mt-6">
-            <button className="w-full flex items-center justify-center px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-blue-700 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600" onClick={kingschat}>
-              <FaComment className="mr-2" /> Login with KingsChat
-            </button>
+        <form className="space-y-4">
+          <div className="flex flex-col space-y-2">
+            <input
+              type="text"
+              placeholder="Email"
+              className="rounded-md py-2 px-3 border border-gray-300 focus:outline-none focus:border-blue-500"
+            />
+            <input
+              type="password"
+              placeholder="Password"
+              className="rounded-md py-2 px-3 border border-gray-300 focus:outline-none focus:border-blue-500"
+            />
           </div>
-          <div className="mt-6">
-            <button className="w-full flex items-center justify-center px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-blue-700 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600" onClick={facebook}>
-              <FaFacebook className="mr-2" /> Login with Facebook
-            </button>
-          </div>
-          <div className="mt-6">
-            <button className="w-full flex items-center justify-center px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-blue-700 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600" onClick={google}>
-              <FaGoogle className="mr-2" /> Login with Google
-            </button>
-          </div>
+          <button
+            type="button"
+            className="w-full flex items-center justify-center px-4 py-2 bg-blue-700 text-white rounded-md hover:bg-blue-600 transition duration-200 transform focus:outline-none focus:ring focus:ring-blue-300"
+          >
+            Login
+          </button>
+          <button
+            type="button"
+            className="w-full flex items-center justify-center px-4 py-2 bg-blue-700 text-white rounded-md hover:bg-blue-600 transition duration-200 transform focus:outline-none focus:ring focus:ring-blue-300"
+            onClick={kingschat}
+          >
+            <FaComment className="mr-2" /> Login with KingsChat
+          </button>
+          <button
+            type="button"
+            className="w-full flex items-center justify-center px-4 py-2 bg-blue-700 text-white rounded-md hover:bg-blue-600 transition duration-200 transform focus:outline-none focus:ring focus:ring-blue-300"
+            onClick={facebook}
+          >
+            <FaFacebook className="mr-2" /> Login with Facebook
+          </button>
+          <button
+            type="button"
+            className="w-full flex items-center justify-center px-4 py-2 bg-blue-700 text-white rounded-md hover:bg-blue-600 transition duration-200 transform focus:outline-none focus:ring focus:ring-blue-300"
+            onClick={google}
+          >
+            <FaGoogle className="mr-2" /> Login with Google
+          </button>
         </form>
-
-        <p className="mt-8 text-xs font-light text-center text-gray-700">
+        <p className="mt-8 text-xs text-center text-gray-700">
           Don't have an account?{' '}
           <a
             href="https://hs-birthday-api.vercel.app/"
             className="font-medium text-blue-600 hover:underline"
           >
-            Sign up on KingsChat
+            Sign up
           </a>
         </p>
       </div>
